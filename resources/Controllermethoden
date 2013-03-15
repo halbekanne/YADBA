@@ -1,0 +1,26 @@
+Sammlung von Controller- und Modelmethoden
+
+Appointment
+Appointment(Patient p, Activity act, Timeinterval t, Room r, Employee e)
+Konstruktor mit Mindestanzahl an Parametern. Neuer Termin wird NICHT in den Listen registriert.
+
+Employee
+
+isAvailable(TimeIntervall t) : boolean
+isAvailable(Activity a) : boolean
+getAppointments() : List<Appointment>
+Liste der Termine die von diesem Mitarbeiter ausgerichtet werden
+
+RoomController
+availableRooms (TimeInterval t, Activity act) : List<Room>
+Gibt Liste der verfügbaren Räume zurück. Bei Einzelbehandlungen werden, falls möglich, nur Einzelräume zurückgegeben.
+
+EmployeeController
+getAllEmployees() : List<Employee>
+Gibt alle Mitarbeiter zurück
+availableEmployees(Activity act) : List<Employee>
+Gibt die Liste der Mitarbeiter, die act können.
+availableEmployees(TimeInterval t, Activity act) : List<Employee>
+Gibt Liste der verfügbaren Mitarbeiter zurück.
+getAppointmentsInTime(Employee e,TimeInterval t) : List<Appointment>
+Gibt Liste aller Termine eines Employees in einem TimeIntervall zurück
